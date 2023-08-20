@@ -1,16 +1,10 @@
-import React from 'react'
-import Pages from './pages/Pages'
-import { useEffect } from 'react';
-
+import React from "react";
+import Pages from "./pages/Pages";
+import "./App.css";
 export default function App() {
-  useEffect(() => {
-    window.process = {
-      ...window.process,
-    };
-  }, []);
   return (
-    <div className='App'>
+    <div className="App">
       <Pages />
     </div>
-  )
+  );
 }

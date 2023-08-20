@@ -30,6 +30,7 @@ export default function Popular() {
     <>
       <Wrapper>
         <h3>Popular Picks</h3>
+        
         <Splide
           options={{
             perPage: 4,
@@ -44,6 +45,7 @@ export default function Popular() {
               <SplideSlide>
                 <Card key={id}>
                   <p>{recipe.title}</p>
+                  
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
                 </Card>
@@ -59,11 +61,12 @@ const Wrapper = styled.div`
   margin: 4rem 0rem;
 `;
 const Card = styled.div`
-  min-height: 15rem;
+  min-height: 20rem; //min-height:25rem;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
-  width: 300px;
+  /* width: 300px; */
+  /* width: 25rem; */
 
   img {
     border-radius: 2rem;
@@ -74,7 +77,7 @@ const Card = styled.div`
     object-fit: cover;
   }
   p {
-    position: absolute;
+    position: absolut e;
     z-index: 10;
     left: 50%;
     bottom: 0%;

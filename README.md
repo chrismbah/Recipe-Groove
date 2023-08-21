@@ -1,8 +1,32 @@
-# React + Vite
+# TastyBites Recipe App 🍽️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![TastyBites Logo](/public/chef.svg)
 
-Currently, two official plugins are available:
+TastyBites is a delightful recipe app that allows you to explore, discover, and share your favorite recipes from around the world. The app is powered by a robust RESTful API that provides access to a vast collection of mouthwatering recipes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Browse a diverse collection of recipes.
+- Search for recipes by keywords or ingredients.
+- View detailed recipe information, including ingredients and instructions.
+- Mark recipes as favorites for quick access.
+- User-friendly and intuitive interface.
+
+## API Documentation
+
+The TastyBites API provides endpoints to interact with the app's database of recipes. Here are some key endpoints:
+
+- `GET /api/recipes`: Get a list of all recipes.
+- `GET /api/recipes/{id}`: Get details of a specific recipe by its ID.
+- `GET /api/recipes/search?q={query}`: Search for recipes based on a query.
+- ...
+
+## Installation
+
+1. Clone the repository: `git clone https://github.com/chrismbah/Recipe-Groove.git`
+2. Navigate to the project directory: `cd "RECIPE APP"`
+3. Install dependencies: `npm install`
+4. Configure the API endpoint in `vite.config.js`.
+5. Start the app: `npm start`
+
+Happy cooking with Recipe Groove! 🍳👨‍🍳👩‍🍳

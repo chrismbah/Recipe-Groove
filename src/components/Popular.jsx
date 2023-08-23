@@ -18,7 +18,7 @@ export default function Popular() {
       setPopular(JSON.parse(check)); //? If 'popular' is true/exists convert to JSON and setPopular as 'popular'
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=cc743949391a4028a81626d56eee385a&number=12`
+        `https://api.spoonacular.com/recipes/random?apiKey=cfe9b37e897f48eea3603d73556d9ed6&number=12`
       );
       const data = await api.json();
       localStorage.setItem("popular", JSON.stringify(data.recipes)); //? Fetch data,convert to String and store in local storage
@@ -30,10 +30,10 @@ export default function Popular() {
     <>
       <Wrapper>
         <h3>Popular Picks</h3>
-        
+
         <Splide
           options={{
-            perPage: 4,
+            perPage: 3,
             arrows: false,
             pagination: false,
             drag: "free",
@@ -45,7 +45,7 @@ export default function Popular() {
               <SplideSlide>
                 <Card key={id}>
                   <p>{recipe.title}</p>
-                  
+
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
                 </Card>
@@ -61,12 +61,11 @@ const Wrapper = styled.div`
   margin: 4rem 0rem;
 `;
 const Card = styled.div`
-  min-height: 20rem; //min-height:25rem;
+  min-height: 15rem;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
-  /* width: 300px; */
-  /* width: 25rem; */
+  width: 300px;
 
   img {
     border-radius: 2rem;
@@ -77,7 +76,7 @@ const Card = styled.div`
     object-fit: cover;
   }
   p {
-    position: absolut e;
+    position: absolute;
     z-index: 10;
     left: 50%;
     bottom: 0%;
